@@ -1,38 +1,84 @@
+/* src/App.css */
+
+body {
+  background-color: #2e644a; /* Black background */
+}
+
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 7px 20px;
+  background-color: #5b9626;
+  color: white;
+  border: double 5px #9cca8c;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.task-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* To align the delete icon to the right */
+  background-color: #ebecd4;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  width: 1000px; /* Set a fixed width */
+  box-sizing: border-box; /* Ensure padding doesn't increase width */
+  font-family: cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.completed {
+  text-decoration: line-through;
+}
+
+.delete-task {
+  cursor: pointer;
+  color: red;
+}
+
+/* Add a subtle border animation to the button */
+button {
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1.05);
   }
 }
+
